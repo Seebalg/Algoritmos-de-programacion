@@ -1,0 +1,15 @@
+int BinarySearchFirstOccurrence(int A[], int i, int j, int k)
+{
+    int result, result2;
+    result = BinarySearch(A, i, j, k);
+    if(result >= 0)
+    {
+        result2 = BinarySearch(A, i, result - 1, k);
+        while(result2 >= 0)
+        {
+         result = result2;
+         result2 = BinarySearch(A, i, result - 1, k);
+        }
+    }
+    return result;
+}
