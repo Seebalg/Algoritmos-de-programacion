@@ -1,3 +1,5 @@
+#define myInfinite 2147483647
+
 void MyMerge(int A[], int p, int q, int r) {
     int n1 = q - p + 1, n2 = r - q, i, j, k;
     int L[n1 + 2], R[n2 + 2];
